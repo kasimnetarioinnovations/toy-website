@@ -10,13 +10,13 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
    <div className="container-fluid footer-bg">
-        <footer>
+        {/* <footer>
           <div className="footer-social-icon">
           <FaFacebook />
           <FaTwitter />
           <FaLinkedin />
           </div>
-        </footer>
+        </footer> */}
    </div>
   )
 }
