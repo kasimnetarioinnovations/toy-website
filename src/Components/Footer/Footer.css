@@ -1,0 +1,7 @@
+.footer-bg{
+    background-color: #fff;
+}
+.footer-social-icon{
+    display: flex;
+    gap: 10px;
+}
