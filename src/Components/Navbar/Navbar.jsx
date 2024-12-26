@@ -12,43 +12,39 @@ import { GiComb } from "react-icons/gi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
 import "bootstrap/dist/css/bootstrap.min.css"; //mention this
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 const Navbars = () => {
   return (
     <>
       <div>
-      <div className="mobile bg-body-tertiary">
-        {/* 1st div */}
-        <div className="" style={{ display: "flex", gap: "10px" }}>
-          <span>
-            <FiPhoneCall style={{ fontSize: "22px" }} />
-          </span>
-          <span>+91 8888 4444 20</span>
+        <div className="mobile bg-body-tertiary">
+          {/* 1st div */}
+          <div className="" style={{ display: "flex", gap: "10px" }}>
+            <span>
+              <FiPhoneCall style={{ fontSize: "22px" }} />
+            </span>
+            <span>+91 8888 4444 20</span>
+          </div>
+          {/* 2nd div */}
+          <div className="" style={{ display: "flex", gap: "10px" }}>
+            <span>
+              <FaCarSide style={{ color: "#f9c542", fontSize: "30px" }} />
+            </span>
+            <span className="">Free shipping on orders above 799</span>
+            <span className="px-2">
+              English
+              <BiChevronDown />
+            </span>
+          </div>
         </div>
-        {/* 2nd div */}
-        <div className="" style={{ display: "flex", gap: "10px" }}>
-          <span>
-            <FaCarSide style={{ color: "#f9c542", fontSize: "30px" }} />
-          </span>
-          <span className="">Free shipping on orders above 799</span>
-          <span className="px-2">
-            English
-            <BiChevronDown />
-          </span>
-        </div>
-      </div>
 
         <nav className="navbar navbar-expand-lg  bg-body-tertiary">
-          
           <div className="container-fluid">
-          <div className="logo d-flex align-items-center ">
-          <img src={Website} alt="" />
-            <a className="navbar-brand p-0" href="#">
-            PlayPaloozo
-            </a>
+            <div className="logo d-flex align-items-center ">
+              <img src={Website} alt="" />
+              <a className="navbar-brand p-0" href="#">
+                PlayPaloozo
+              </a>
             </div>
             <button
               className="navbar-toggler"
@@ -82,7 +78,7 @@ const Navbars = () => {
                     Categories
                   </a>
                   <ul className="dropdown-menu">
-                    <li className="d-flex flex-column">
+                    {/* <li className="d-flex flex-column">
                       <div
                         className="d-flex align-items-center justify-content-around"
                         style={{ gap: "10px" }}
@@ -99,9 +95,30 @@ const Navbars = () => {
                         See more
                         <BsArrowRight />
                       </span>
-                    </li>
+                    </li> */}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <GiDuck style={{ color: "#8565d1", fontSize: "25px" }} />
+                      Toys{" "}
+                      <span
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
+                      >
+                        New
+                      </span>
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
 
-                    <li className="d-flex flex-column">
+                    {/* <li className="d-flex flex-column">
                       <div
                         className="d-flex align-items-center justify-content-around"
                         style={{ gap: "10px" }}
@@ -125,9 +142,25 @@ const Navbars = () => {
                         See more
                         <BsArrowRight />
                       </span>
-                    </li>
+                    </li> */}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <BiBookAlt
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />
+                      Stationary{" "}
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
 
-                    <li className="d-flex flex-column">
+                    {/* <li className="d-flex flex-column">
                       <div
                         className="d-flex align-items-center justify-content-around"
                         style={{ gap: "10px" }}
@@ -151,32 +184,48 @@ const Navbars = () => {
                         See more
                         <BsArrowRight />
                       </span>
-                    </li>
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                    </li> */}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-80">
+                      <GiComb
+                        className="mx-2"
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Hair Access{" "}
+                      <span
+                        className="mx-2"
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
                       >
-                        <BiShoppingBag
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Bags</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
+                        New
+                      </span>{" "}
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
+                    <span className="d-flex align-items-center justify-content-around px-3  w-75">
+                      <BiShoppingBag
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Bag Access
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -187,104 +236,89 @@ const Navbars = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Boy
+                    Boys
                   </a>
                   <ul className="dropdown-menu">
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <GiDuck style={{ color: "#8565d1", fontSize: "25px" }} />
+                      Toys{" "}
+                      <span
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
                       >
-                        <GiDuck className="" style={{ color: "#8565d1", fontSize: "30px" }} />
-                        <a href="link">Toys</a>
-                        <p className="new" style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}>New</p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
+                        New
                       </span>
-                    </li>
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
 
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
-                      >
-                        <BiBookAlt
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Stationary</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <BiBookAlt
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />
+                      Stationary{" "}
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
 
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-80">
+                      <GiComb
+                        className="mx-2"
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Hair Access{" "}
+                      <span
+                        className="mx-2"
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
                       >
-                        <GiComb
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Hair Accessories</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                        New
+                      </span>{" "}
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
                       >
-                        <BiShoppingBag
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Bags</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
+                    <span className="d-flex align-items-center justify-content-around px-3  w-75">
+                      <BiShoppingBag
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Bag Access
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -298,101 +332,87 @@ const Navbars = () => {
                     Girl
                   </a>
                   <ul className="dropdown-menu">
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                   
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <GiDuck style={{ color: "#8565d1", fontSize: "25px" }} />
+                      Toys{" "}
+                      <span
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
                       >
-                        <GiDuck className="" style={{ color: "#8565d1", fontSize: "30px" }} />
-                        <a href="link">Toys</a>
-                        <p className="new" style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}>New</p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
+                        New
                       </span>
-                    </li>
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
 
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
-                      >
-                        <BiBookAlt
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Stationary</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
+                    <span className="d-flex align-items-center justify-content-around px-3 w-75">
+                      <BiBookAlt
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />
+                      Stationary{" "}
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
 
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                    <span className="d-flex align-items-center justify-content-around px-3 w-80">
+                      <GiComb
+                        className="mx-2"
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Hair Access{" "}
+                      <span
+                        className="mx-2"
+                        style={{ color: "#4ba37d", backgroundColor: "#ecfdf3" }}
                       >
-                        <GiComb
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Hair Accessories</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
-                    <li className="d-flex flex-column">
-                      <div
-                        className="d-flex align-items-center justify-content-around"
-                        style={{ gap: "10px" }}
+                        New
+                      </span>{" "}
+                    </span>
+                    <span>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#8565d1",
+                          fontWeight: "600",
+                          borderRadius: "10px",
+                        }}
                       >
-                        <BiShoppingBag
-                          style={{ color: "#8565d1", fontSize: "30px" }}
-                        />
-                        <a href="Toys">Bags</a>
-                        <p
-                          className="new"
-                          style={{
-                            color: "#4ba37d",
-                            backgroundColor: "#ecfdf3",
-                            fontSize: "10px",
-                          }}
-                        >
-                          New
-                        </p>
-                      </div>
-                      <span className="seemore-btn">
-                        See more
-                        <BsArrowRight />
-                      </span>
-                    </li>
+                        See more <BsArrowRight />
+                      </p>
+                    </span>
+                    <span className="d-flex align-items-center justify-content-around px-3  w-75">
+                      <BiShoppingBag
+                        style={{ color: "#8565d1", fontSize: "25px" }}
+                      />{" "}
+                      Bag Access
+                    </span>
+                    <p
+                      style={{
+                        textAlign: "center",
+                        color: "#8565d1",
+                        fontWeight: "600",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      See more <BsArrowRight />
+                    </p>
                   </ul>
                 </li>
                 <li className="nav-item">
@@ -402,21 +422,24 @@ const Navbars = () => {
                 </li>
               </ul>
               <form className="d-flex" role="search">
-              <div className="d-flex justify-content-around align-items-center">
-              <div className="d-flex gap-4 seemore">
-                <button
-                  className="login-btn"
-                  style={{ backgroundColor: "transparent", color: "#676969" }}
-                >
-                  Login
-                </button>
-                <button
-                  className="login-btn"
-                  style={{ backgroundColor: "#8565d1", color: "white" }}
-                >
-                  Shop
-                </button>
-                </div>
+                <div className="d-flex justify-content-around align-items-center">
+                  <div className="d-flex gap-4 seemore">
+                    <button
+                      className="login-btn"
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "#676969",
+                      }}
+                    >
+                      Login
+                    </button>
+                    <button
+                      className="login-btn"
+                      style={{ backgroundColor: "#8565d1", color: "white" }}
+                    >
+                      Shop
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

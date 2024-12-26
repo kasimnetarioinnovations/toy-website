@@ -114,3 +114,19 @@
    opacity: 0;
   }
 }
+
+@media (min-width:320px) and (max-width:768px) {
+  .carousal {
+    padding: 0px 0px;
+  }
+  .arrow {
+   opacity: 0;
+  }
+  .toy-heading {
+    padding: 0;
+    font-size: 20px;
+    width: 170px !important;
+  }
+  .carousal-img {
+  }
+}

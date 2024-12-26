@@ -1,5 +1,5 @@
 import React from "react";
-import "../Header/Header.css";
+// import "../Header/Header.css";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaCarSide } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
