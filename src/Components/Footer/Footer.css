@@ -1,7 +1,12 @@
-.footer-bg{
-    background-color: pink;  
-    
-}
+    .footer-bg{
+        background-color: rgb(232, 229, 229);
+        background-image: url(../../Assets/Image/footer-bottom-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: center; */
+        width: 100%;
+        
+    }
 footer{
     padding: 30px 0;
 }
@@ -14,18 +19,19 @@ footer{
     
 }
 .footer-social-icon a{
-    font-size: 22px;
-    color: white;
+    font-size: 27px;
+    color: #98A2B3;
     transition: 0.5s;
 }
 .footer-social-icon a:hover{
-    color: #98A2B3;
+    color: #d0d6e2;
 }
 .footer-main-content{
     display: flex;
     justify-content: space-between;
     padding: 50px 0;
     gap: 130px;
+    font-size: 18px;
 }
 .footer-content1{
     width: 300px;
@@ -107,8 +113,10 @@ footer{
   background-color: #98A2B3;
 }
 .footer-bottom-content{
+  
     display: flex;
    justify-content: space-between;
+   align-items: stretch;
   
 }
 .condition{
@@ -127,6 +135,8 @@ footer{
     display: flex;
     gap: 10rem;
 }
+
+
 @media (max-width:425px){
     .footer-main-content{
         flex-direction: column;
@@ -137,12 +147,16 @@ footer{
          flex-direction: column;
     }
     .subscribe-btn button{
-        width: 90px;
+        /* width: 90px; */
     }
     .footer-content2 ul li a, .footer-content3 ul li a{
         font-size: 13px;
         font-weight: 500;
     }
+    .footer-bottom-content {
+        flex-direction: column;
+    }
+    
    
     
 
