@@ -10,7 +10,7 @@ import footerlogo from '../../Assets/Image/website-logo.png'
 
 const Footer = () => {
   return (
-   <div className="section-padding footer-bg ">
+   <div className="wrapper section-padding footer-bg">
         <footer>
           <div className="footer-social-icon">
           <a href="#"><FaFacebook /></a>
@@ -35,10 +35,10 @@ const Footer = () => {
                 <ul>
                   <li><a href="#">Girls</a></li>
                   <li><a href="#">Boys</a></li>
-                  <li><a href="#">Stationary</a></li>
+                  <li><a href="#">Stationary </a></li>
                   <li><a href="#">Toys</a></li>
                   <li><a href="#">Carry Bags</a></li>
-                  <li><a href="#">Hair accessories</a></li>
+                  <li><a href="#">Hair accessories </a></li>
                 </ul>
             </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
             <div className='footer-content4'>
-            <div><b>Resources</b></div>
+            <div><b>Stay up to date</b></div>
             <div className='subscribe-btn'>
               <input type="email" placeholder='Enter your email' />
               <button>Subscribe</button>
@@ -71,7 +71,7 @@ const Footer = () => {
              <a href="#">Cookies</a>
             </div>
           </div>
-        </footer> 
+        </footer>
    </div>
   )
 }
