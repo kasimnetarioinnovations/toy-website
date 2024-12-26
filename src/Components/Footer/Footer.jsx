@@ -10,13 +10,8 @@ import footerlogo from '../../Assets/Image/website-logo.png'
 
 const Footer = () => {
   return (
-<<<<<<< HEAD
-   <div className="container-fluid footer-bg">
-        {/* <footer>
-=======
    <div className="section-padding footer-bg ">
         <footer>
->>>>>>> aaecdaf06445924e8f9db456243c0d0894227564
           <div className="footer-social-icon">
           <a href="#"><FaFacebook /></a>
           <a href="#"><FaTwitter /></a>
@@ -76,7 +71,7 @@ const Footer = () => {
              <a href="#">Cookies</a>
             </div>
           </div>
-        </footer> */}
+        </footer> 
    </div>
   )
 }

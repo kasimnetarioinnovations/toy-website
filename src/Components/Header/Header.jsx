@@ -16,6 +16,7 @@ import { GiDuck } from "react-icons/gi";
 import { BiBookAlt } from 'react-icons/bi'
 import { BiShoppingBag } from "react-icons/bi";
 import { GiComb } from "react-icons/gi";
+import Website from '../../Assets/Image/website-logo.png'
 
 const Header = () => {
   return (
@@ -42,19 +43,23 @@ const Header = () => {
           </div>
         </div>
         {/* Navbar */}
-        <Navbar expand="lg" className="p-4 text-black navbar-custom">
+        <Navbar expand="lg" className=" text-black navbar-custom">
           <Container fluid>
             <Navbar.Brand href="#" className="logo">
-              PlayPalooza
+              <p>
+              <img src={Website} alt="" /> <span className="logo-header">PlayPalooza</span>
+              </p>
+              
             </Navbar.Brand>
+    
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="me-auto my-2 my-lg-0"
+                className="me-auto my-2 my-lg-0 scroll-dropdown"
                 style={{ maxHeight: "100px" }}
-                navbarScroll
+                navbarScroll   
               >
-                <Nav.Link href="#action2">Home</Nav.Link>
+                <Nav.Link href="#action2" className="Home">Home</Nav.Link>
                 <NavDropdown title="Categories" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="#action1" className="toydropdown">
                     <span className="d-flex align-items-center justify-content-around px-3 w-75">
@@ -159,7 +164,7 @@ const Header = () => {
                 </NavDropdown>
                 <Nav.Link href="#action2">Stationary</Nav.Link>
               </Nav>
-              <Form className="d-flex" id="Nav-Form">
+              <Form className="d-flex login" id="Nav-Form">
                 <Nav
                   className="me-auto my-2 my-lg-0 navbarScroll"
                   style={{ maxHeight: "100px" }}

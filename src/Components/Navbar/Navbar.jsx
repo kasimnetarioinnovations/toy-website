@@ -11,19 +11,16 @@ import { BiShoppingBag } from "react-icons/bi";
 import { GiComb } from "react-icons/gi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { TiThMenu } from "react-icons/ti";
+import "bootstrap/dist/css/bootstrap.min.css"; //mention this
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
-const Navbar = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleClass = () => {
-    setIsActive(!isActive);
-  };
-
+const Navbars = () => {
   return (
-    <nav>
-      {/* top section */}
-
-      <div className="mobile">
+    <>
+      <div>
+      <div className="mobile bg-body-tertiary">
         {/* 1st div */}
         <div className="" style={{ display: "flex", gap: "10px" }}>
           <span>
@@ -44,359 +41,390 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar">
-        <div className="logo">
+        <nav className="navbar navbar-expand-lg  bg-body-tertiary">
+          
+          <div className="container-fluid">
+          <div className="logo d-flex align-items-center ">
           <img src={Website} alt="" />
-          <a href="#">PlayPaloozo</a>
-        </div>
-
-        <div className={`nav-links ${isActive ? "dnone" : " "}`}>
-          <ul className={` links `}>
-            <li>
-              <a href="#">HOME</a>
-            </li>
-            <li>
-              <a href="#">
-                Categories
-                <RiArrowDropDownLine className="fs-2" />
-              </a>
-
-              <ul className={`htmlCss-sub-menu sub-menu`}>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiDuck style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Toys</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiBookAlt style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Stationary</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiComb style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Hair Accessories</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiShoppingBag
-                      style={{ color: "#8565d1", fontSize: "40px" }}
-                    />
-                    <a href="Toys">Bags</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-              </ul>
-            </li>
-
-            {/* 2nd drop down for boy */}
-
-            <li>
-              <a href="#">
-                Boys
-                <RiArrowDropDownLine className="fs-2" />
-              </a>
-              <i className="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul className={`htmlCss-sub-menu sub-menu `}>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiDuck style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Toys</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiBookAlt style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Stationary</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiComb style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Hair Accessories</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiShoppingBag
-                      style={{ color: "#8565d1", fontSize: "40px" }}
-                    />
-                    <a href="Toys">Bags</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-              </ul>
-            </li>
-
-            {/* 3rd dropdown for girl */}
-
-            <li>
-              <a href="#">
-                Girl
-                <RiArrowDropDownLine className="fs-2" />
-              </a>
-              <i className="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-              <ul className={`htmlCss-sub-menu sub-menu `}>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiDuck style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Toys</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiBookAlt style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Stationary</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <GiComb style={{ color: "#8565d1", fontSize: "40px" }} />
-                    <a href="Toys">Hair Accessories</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-                <li className="d-flex flex-column">
-                  <div
-                    className="d-flex align-items-center justify-content-around"
-                    style={{ gap: "10px" }}
-                  >
-                    <BiShoppingBag
-                      style={{ color: "#8565d1", fontSize: "40px" }}
-                    />
-                    <a href="Toys">Bags</a>
-                    <p
-                      className="new"
-                      style={{
-                        color: "#4ba37d",
-                        backgroundColor: "#ecfdf3",
-                        fontSize: "10px",
-                      }}
-                    >
-                      New
-                    </p>
-                  </div>
-                  <span className="seemore-btn">
-                    See more
-                    <BsArrowRight />
-                  </span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Stationary</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="d-flex justify-content-around align-items-center">
-          <div className="d-flex gap-4">
+            <a className="navbar-brand p-0" href="#">
+            PlayPaloozo
+            </a>
+            </div>
             <button
-              className="login-btn"
-              style={{ backgroundColor: "transparent", color: "#676969" }}
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              Login
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <button
-              className="login-btn"
-              style={{ backgroundColor: "#8565d1", color: "white" }}
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
             >
-              Shop
-            </button>
+              <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categories
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiDuck style={{ color: "#8565d1", fontSize: "30px" }} />
+                        <a href="link">Toys</a>
+                        <p className="new" style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}>New</p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiBookAlt
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Stationary</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiComb
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Hair Accessories</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiShoppingBag
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Bags</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Boy
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiDuck className="" style={{ color: "#8565d1", fontSize: "30px" }} />
+                        <a href="link">Toys</a>
+                        <p className="new" style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}>New</p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiBookAlt
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Stationary</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiComb
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Hair Accessories</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiShoppingBag
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Bags</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Girl
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiDuck className="" style={{ color: "#8565d1", fontSize: "30px" }} />
+                        <a href="link">Toys</a>
+                        <p className="new" style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}>New</p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiBookAlt
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Stationary</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <GiComb
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Hair Accessories</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                    <li className="d-flex flex-column">
+                      <div
+                        className="d-flex align-items-center justify-content-around"
+                        style={{ gap: "10px" }}
+                      >
+                        <BiShoppingBag
+                          style={{ color: "#8565d1", fontSize: "30px" }}
+                        />
+                        <a href="Toys">Bags</a>
+                        <p
+                          className="new"
+                          style={{
+                            color: "#4ba37d",
+                            backgroundColor: "#ecfdf3",
+                            fontSize: "10px",
+                          }}
+                        >
+                          New
+                        </p>
+                      </div>
+                      <span className="seemore-btn">
+                        See more
+                        <BsArrowRight />
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" aria-current="page" href="#">
+                    Stationary
+                  </a>
+                </li>
+              </ul>
+              <form className="d-flex" role="search">
+              <div className="d-flex justify-content-around align-items-center">
+              <div className="d-flex gap-4 seemore">
+                <button
+                  className="login-btn"
+                  style={{ backgroundColor: "transparent", color: "#676969" }}
+                >
+                  Login
+                </button>
+                <button
+                  className="login-btn"
+                  style={{ backgroundColor: "#8565d1", color: "white" }}
+                >
+                  Shop
+                </button>
+                </div>
+                </div>
+              </form>
+            </div>
           </div>
-
-          <TiThMenu className="menubtn" onClick={toggleClass} />
-        </div>
+        </nav>
       </div>
-    </nav>
+    </>
   );
 };
 
-export default Navbar;
+export default Navbars;

@@ -16,7 +16,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Volkhov", serif;
+  background: rgb(247,230,249);
+background: linear-gradient(90deg, rgba(247,230,249,1) 0%, rgba(224,247,250,1) 100%);
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
